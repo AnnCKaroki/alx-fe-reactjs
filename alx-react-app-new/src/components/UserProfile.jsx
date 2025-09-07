@@ -1,4 +1,4 @@
-const UserProfile = (props) => {
+function UserProfile(props) {
   return (
     <div style={{ padding: '20px', margin: '10px', border: '1px solid gray' }}>
       <h2 style={{ color: 'blue' }}>{props.name}</h2>
