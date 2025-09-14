@@ -4,7 +4,7 @@ import useRecipeStore from './recipeStore';
 const RecipeDetails = () => {
   const { recipeId } = useParams();
   const recipe = useRecipeStore(state =>
-    state.recipes.find(r => r.id === parseInt(recipeId))
+    state.recipes.find(r => String(r.id) === String(recipeId))
   );
 
   if (!recipe) {
@@ -15,6 +15,7 @@ const RecipeDetails = () => {
     <div>
       <h1>{recipe.title}</h1>
       <p>{recipe.description}</p>
+      <p><strong>Recipe ID:</strong> {recipe.id}</p>
     </div>
   );
 };
