@@ -7,7 +7,8 @@ const AddRecipeForm = () => {
         title: '',
         image: '',
         ingredients: '',
-        instructions: ''
+        instructions: '',
+        steps: ''
     });
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,7 +20,7 @@ const AddRecipeForm = () => {
             [name]: value
         }));
 
-
+        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -49,6 +50,10 @@ const AddRecipeForm = () => {
             newErrors.instructions = 'Instructions are required';
         }
 
+        if (!formData.steps.trim()) {
+            newErrors.steps = 'Cooking steps are required';
+        }
+
         return newErrors;
     };
 
@@ -74,17 +79,18 @@ const AddRecipeForm = () => {
         }
 
         try {
-
+            // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
 
-
+            // Process the form data
             const newRecipe = {
                 id: Date.now(),
                 title: formData.title.trim(),
                 image: formData.image.trim(),
                 summary: `Delicious ${formData.title.trim()} recipe`,
                 ingredients: formData.ingredients.split('\n').filter(ingredient => ingredient.trim()),
-                instructions: formData.instructions.split('\n').filter(instruction => instruction.trim())
+                instructions: formData.instructions.split('\n').filter(instruction => instruction.trim()),
+                steps: formData.steps.split('\n').filter(step => step.trim())
             };
 
             console.log('New Recipe:', newRecipe);
@@ -94,10 +100,11 @@ const AddRecipeForm = () => {
                 title: '',
                 image: '',
                 ingredients: '',
-                instructions: ''
+                instructions: '',
+                steps: ''
             });
 
-
+            // Show success message and redirect
             alert('Recipe added successfully!');
             navigate('/');
 
@@ -212,7 +219,7 @@ const AddRecipeForm = () => {
                     </div>
 
                     {/* Instructions */}
-                    <div className="mb-8">
+                    <div className="mb-6">
                         <label htmlFor="instructions" className="block text-sm font-semibold text-gray-700 mb-2">
                             Cooking Instructions *
                         </label>
@@ -221,8 +228,8 @@ const AddRecipeForm = () => {
                             name="instructions"
                             value={formData.instructions}
                             onChange={handleInputChange}
-                            rows="8"
-                            placeholder="Enter each instruction step on a new line:&#10;Preheat oven to 350°F (175°C)&#10;Mix dry ingredients in a large bowl&#10;Beat eggs and add to mixture&#10;Bake for 25-30 minutes until golden"
+                            rows="6"
+                            placeholder="Enter cooking instructions:&#10;Mix all dry ingredients together&#10;Add wet ingredients gradually&#10;Bake according to recipe directions"
                             className={`w-full px-4 py-3 border rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical ${
                                 errors.instructions
                                     ? 'border-red-500 bg-red-50'
@@ -238,7 +245,38 @@ const AddRecipeForm = () => {
                             </p>
                         )}
                         <p className="mt-1 text-xs text-gray-500">
-                            Enter each step on a separate line
+                            Enter general cooking instructions
+                        </p>
+                    </div>
+
+                    {/* Cooking Steps */}
+                    <div className="mb-8">
+                        <label htmlFor="steps" className="block text-sm font-semibold text-gray-700 mb-2">
+                            Detailed Cooking Steps *
+                        </label>
+                        <textarea
+                            id="steps"
+                            name="steps"
+                            value={formData.steps}
+                            onChange={handleInputChange}
+                            rows="8"
+                            placeholder="Enter each detailed step on a new line:&#10;Step 1: Preheat oven to 350°F (175°C)&#10;Step 2: Mix dry ingredients in a large bowl&#10;Step 3: Beat eggs and add to mixture&#10;Step 4: Bake for 25-30 minutes until golden"
+                            className={`w-full px-4 py-3 border rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical ${
+                                errors.steps
+                                    ? 'border-red-500 bg-red-50'
+                                    : 'border-gray-300 hover:border-gray-400'
+                            }`}
+                        />
+                        {errors.steps && (
+                            <p className="mt-1 text-sm text-red-600 flex items-center">
+                                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                </svg>
+                                {errors.steps}
+                            </p>
+                        )}
+                        <p className="mt-1 text-xs text-gray-500">
+                            Enter each detailed step on a separate line
                         </p>
                     </div>
 
