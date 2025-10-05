@@ -1,39 +1,38 @@
 [
   {
     "id": 1,
-    "title": "Spaghetti Carbonara",
-    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. Quick and comforting.",
-    "image": "https://via.placeholder.com/400x250?text=Carbonara"
+    "title": "Classic Spaghetti Carbonara",
+    "summary": "A traditional Italian pasta dish with eggs, cheese, pancetta, and pepper. Creamy and delicious without using cream!",
+    "image": "https://via.placeholder.com/400x250"
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth, buttery, & creamy tomato-based gravy. Serve with naan.",
-    "image": "https://via.placeholder.com/400x250?text=Tikka+Masala"
+    "summary": "Tender chunks of roasted marinated chicken in a spiced curry sauce. A popular Indian-inspired dish with rich flavors.",
+    "image": "https://via.placeholder.com/400x250"
   },
   {
     "id": 3,
-    "title": "Vegan Lentil Soup",
-    "summary": "Hearty and nutritious soup made with red lentils, carrots, celery, and a blend of Mediterranean spices. Great for cold weather.",
-    "image": "https://via.placeholder.com/400x250?text=Lentil+Soup"
+    "title": "Homemade Chocolate Chip Cookies",
+    "summary": "Soft and chewy chocolate chip cookies made from scratch. Perfect for dessert or an afternoon snack with milk.",
+    "image": "https://via.placeholder.com/400x250"
   },
   {
     "id": 4,
-    "title": "Ultimate Beef Burgers",
-    "summary": "Juicy beef patties seasoned perfectly and served on toasted buns with all your favorite toppings. A summer BBQ staple.",
-    "image": "https://via.placeholder.com/400x250?text=Beef+Burger"
+    "title": "Fresh Garden Salad",
+    "summary": "A healthy mix of fresh greens, tomatoes, cucumbers, and vegetables. Light, refreshing, and packed with nutrients.",
+    "image": "https://via.placeholder.com/400x250"
   },
   {
     "id": 5,
-    "title": "Lemon Drizzle Cake",
-    "summary": "A light, moist sponge cake infused with a zesty lemon syrup. Perfect for afternoon tea or dessert.",
-    "image": "https://via.placeholder.com/400x250?text=Lemon+Cake"
+    "title": "Beef Stir Fry with Vegetables",
+    "summary": "Quick and easy stir-fried beef with colorful vegetables in a savory sauce. Perfect for busy weeknight dinners.",
+    "image": "https://via.placeholder.com/400x250"
   },
   {
     "id": 6,
-    "title": "Spicy Tuna Rolls",
-    "summary": "Fresh tuna mixed with a creamy, spicy mayo sauce, rolled inside rice and seaweed. Simple and delicious homemade sushi.",
-    "image": "https://via.placeholder.com/400x250?text=Tuna+Rolls"
+    "title": "Blueberry Pancakes",
+    "summary": "Fluffy pancakes loaded with fresh blueberries. A perfect breakfast treat that's sure to start your day right.",
+    "image": "https://via.placeholder.com/400x250"
   }
 ]
-
