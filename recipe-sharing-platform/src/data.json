@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. Quick and comforting.",
+    "image": "https://via.placeholder.com/400x250?text=Carbonara"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth, buttery, & creamy tomato-based gravy. Serve with naan.",
+    "image": "https://via.placeholder.com/400x250?text=Tikka+Masala"
+  },
+  {
+    "id": 3,
+    "title": "Vegan Lentil Soup",
+    "summary": "Hearty and nutritious soup made with red lentils, carrots, celery, and a blend of Mediterranean spices. Great for cold weather.",
+    "image": "https://via.placeholder.com/400x250?text=Lentil+Soup"
+  },
+  {
+    "id": 4,
+    "title": "Ultimate Beef Burgers",
+    "summary": "Juicy beef patties seasoned perfectly and served on toasted buns with all your favorite toppings. A summer BBQ staple.",
+    "image": "https://via.placeholder.com/400x250?text=Beef+Burger"
+  },
+  {
+    "id": 5,
+    "title": "Lemon Drizzle Cake",
+    "summary": "A light, moist sponge cake infused with a zesty lemon syrup. Perfect for afternoon tea or dessert.",
+    "image": "https://via.placeholder.com/400x250?text=Lemon+Cake"
+  },
+  {
+    "id": 6,
+    "title": "Spicy Tuna Rolls",
+    "summary": "Fresh tuna mixed with a creamy, spicy mayo sauce, rolled inside rice and seaweed. Simple and delicious homemade sushi.",
+    "image": "https://via.placeholder.com/400x250?text=Tuna+Rolls"
+  }
+]
+
