@@ -3,16 +3,21 @@ import RegistrationForm from './components/RegistrationForm';
 import FormikForm from './components/FormikForm';
 import './App.css';
 
-const App = () => {
+function App() {
   return (
     <div className="App">
-      <h1>Form Handling with React</h1>
-      <h2>Registration Form</h2>
-      <RegistrationForm />
-      <h2>Formik Form</h2>
-      <FormikForm />
+      <h1>Form Handling in React</h1>
+
+      <div style={{ marginBottom: '2rem' }}>
+        <h2>Controlled Components Form</h2>
+        <RegistrationForm />
+      </div>
+
+      <div>
+        <FormikForm />
+      </div>
     </div>
   );
-};
+}
 
 export default App;

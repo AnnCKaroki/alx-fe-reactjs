@@ -16,34 +16,37 @@ const validationSchema = Yup.object().shape({
 
 const FormikForm = () => {
   const handleSubmit = (values) => {
-    console.log('Form values:', values);
+    console.log('Formik form values:', values);
   };
 
   return (
-    <Formik
-      initialValues={{ username: '', email: '', password: '' }}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      <Form>
-        <div>
-          <label htmlFor="username">Username</label>
-          <Field name="username" type="text" />
-          <ErrorMessage name="username" component="div" />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <Field name="email" type="email" />
-          <ErrorMessage name="email" component="div" />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <Field name="password" type="password" />
-          <ErrorMessage name="password" component="div" />
-        </div>
-        <button type="submit">Submit</button>
-      </Form>
-    </Formik>
+    <div>
+      <h2>Formik Form</h2>
+      <Formik
+        initialValues={{ username: '', email: '', password: '' }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <div>
+            <label htmlFor="username">Username:</label>
+            <Field name="username" type="text" id="username" />
+            <ErrorMessage name="username" component="div" style={{ color: 'red' }} />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <Field name="email" type="email" id="email" />
+            <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <Field name="password" type="password" id="password" />
+            <ErrorMessage name="password" component="div" style={{ color: 'red' }} />
+          </div>
+          <button type="submit">Register</button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 
